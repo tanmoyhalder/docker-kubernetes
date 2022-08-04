@@ -1,0 +1,9 @@
+pandas
+numpy
+pydantic
+uvicorn
+fastapi
+typing
+gunicorn==19.9.0
+uvloop
+httptools

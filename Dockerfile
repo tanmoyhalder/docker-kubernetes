@@ -1,0 +1,24 @@
+## FROM python:3.8
+
+## OFFICIAL BASE IMAGE FOR FASTAPI
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+
+## SETTING WORKING DIRECTORY
+WORKDIR /app
+
+## COPYING FILES TO WORKING DIRECTORY
+COPY . /app
+
+## RUNNING PACKAGE INSTALLATION ON CUSTOM IMAGE 
+RUN pip install -r requirements.txt
+
+## EXPOSING PORT (ONLY DOCUMENTATON PURPOSE)
+EXPOSE 8000
+
+## COMMAND TO INITIAT AND RUN A CONTAINER
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+## FOR SPINNING UP A CONTAINER 
+## docker build . (THIS WILL GENERATE AN IMAGE_ID)
+## docker run -p 8000:8000 IMAGE_ID
+

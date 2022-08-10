@@ -26,3 +26,9 @@ then just to check if docker is working fine use the following command
 
 To run FastAPI app outside container we need to make sure bot the ports are the ame i.e. 8000
 
+Note:
+
+pushed the docker image to docker hub which can be accessed publicly using the below repo
+
+`tanmoyhalder/python-fast-api`
+
